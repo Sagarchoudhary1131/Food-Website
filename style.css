@@ -1,0 +1,183 @@
+/* CSS Reset  */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation Bar  */
+#navbar {
+    /* display flex karte hi sb home section vale row mai aa gye phe column mai the  */
+    display: flex;
+    
+    align-items: center;
+    /* isse display k bich mai aajata hai hmara content  */
+    position: absolute;
+    top: 0px;
+}
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    /* ye dono iliye 0 diye hai kyuki koi bhi upr ya left se gap na aaye  */
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    /* isse jo hmaracontent jo chup gaya hota hai black background k piche vo aa jata hai   */
+    z-index: -1;
+
+    /* opacity se color thoda light ho jata hai  */
+    opacity: .05;
+
+}
+
+/* Logo and Image  */
+#logo {
+    margin: 3px 4px;
+}
+
+#logo img {
+    height: 50px;
+    margin: 16px 28px;
+}
+
+/* list styling  */
+
+
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+
+
+    /* isse jo dout aate hai vo nhi ayenge  */
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+/* ye humne isliye alg liya kyuki jb hum hover krenge toh jo color change hoga vo nhi hota isliye alg se krna padha  */
+#navbar ul li a {
+    /* display block isliye kiya kyuki padding deni hai  */
+    display: block;
+    padding: 8px 17px;
+
+    /* ise niche ki line hat jaati hai  */
+    text-decoration: none;
+
+    /* isse box mai side se curve ata ahi  */
+    border-radius: 20px;
+
+    /* ab hum  color ko white krenge kyuki vo (a) k andr likha hai */
+    color: white;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section  */
+#home{
+    display: flex;
+    /* isse jo row ho gya tha paragrapgh vo vaps se column mai aajayega  */
+    flex-direction: column;
+    padding: 3px 200px;
+
+    /* height isliye last mai add kara kyuki jo hmara section m likha tha vo upr likha tha isliye niche laane k lye height use karenge  */
+    height: 472px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background:url('https://cdn.pixabay.com/photo/2017/11/23/14/54/food-2972974_960_720.jpg 1x, https://cdn.pixabay.com/photo/2017/11/23/14/54/food-2972974_1280.jpg')no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    /* isse jo hmaracontent jo chup gaya hota hai black background k piche vo aa jata hai   */
+    z-index: -1;
+
+    /* opacity se color thoda light ho jata hai  */
+    opacity: .7;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+     
+  
+    
+  
+}
+
+/* services section  */
+#services{
+    margin: 23px;
+    /* flex isliye kiya hai jo services mai box h unhe row mai lgana pdega n iliye */
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid red;
+    padding: 23px;
+    margin: 23px;
+    border-radius: 23px;
+    background-color: rgb(248 239 248);
+}
+
+#services .box img{
+    /* inse jo hmara img side mai tha vo bich mai aa jayega  */
+    height: 200px;
+    margin: auto;
+    display: block;
+    
+}
+
+
+
+
+/* UTILITY CLASSES  */
+
+.h-primary{
+    /* ye jo h-priamry hai vo hmara h1 mai hi laagu karegi ye baat  */
+    font-size: 3.3rem;
+    padding: 12px 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary{
+    font-size: 3.3rem;
+    padding: 12px 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn{
+    padding: 2px 8px;
+    color: white;
+    border: 2px solid white;
+    background-color: brown;
+    margin: 15px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/* isse jo center dala huva tha na h primary mai toh vo isse center ho jyega  */
+.center{
+    text-align: center;
+}
